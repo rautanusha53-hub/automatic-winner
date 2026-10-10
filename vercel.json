@@ -1,9 +1,22 @@
+
 {
   "version": 2,
+  "rewrites": [
+    {
+      "source": "/api/player",
+      "destination": "https://api-info-tz3o.vercel.app/api/player"
+    }
+  ],
   "builds": [
-    { "src": "app.py", "use": "@vercel/python" }
+    {
+      "src": "app.py",
+      "use": "@vercel/python"
+    }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "app.py" }
+    {
+      "src": "/(.*)",
+      "dest": "app.py"
+    }
   ]
 }
